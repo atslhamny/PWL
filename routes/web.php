@@ -52,3 +52,16 @@ Route::resource('photos', PhotoController::class)->except([
     'update',
     'destroy'
 ]);
+//Tanpa menambahkan direktori baru
+// Route::get('/greeting', function () {
+//     return view('hello', ['name' => 'Atsilah Amany Putri Harsuma']);
+// });
+
+//Dengan menambahkan direktori baru
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Atsilah Amany Putri Harsuma']);
+// });
+
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+
+
